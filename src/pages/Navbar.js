@@ -20,7 +20,7 @@ const Navbar = ({ account, setAccount, setVote, VOTEAddress, VOTE }) => {
             <nav className="navbar">
                 <img className='logo' src='/logovote.jpg' />
                 {
-                    <h1>Martin & Halil-Can</h1>
+                    <h1>Referendum : Martin & Halil-Can</h1>
                 }
                 <div>
                     <Link as={Link} to="/" className="nav-item">Accueil</Link>

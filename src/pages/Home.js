@@ -33,7 +33,7 @@ const Home = ({ vote }) => {
         <div className="app">
             <div className="title-container">
                 <h3>Chers concitoyens, <br />C'est une occasion où chaque voix compte pour
-                    influencer notre avenir collectif. Dans les instants à venir, nous explorerons les enjeux et l'importance de votre
+                    influencer notre avenir collectif durant ce referendum. Dans les instants à venir, nous explorerons les enjeux et l'importance de votre
                     participation dans ce processus démocratique.</h3>
             </div>
             <div className="app-container">
