@@ -5,7 +5,7 @@ describe("Vote", function () {
 
   // La fonction beforeEach est exécutée avant chaque test
   beforeEach(async () => {
-    Vote = await ethers.getContractFactory("Vote");
+    Vote = await ethers.getContractFactory("Voting");
     vote = await Vote.deploy();
     [owner, addr1, addr2] = await ethers.getSigners();
   });
@@ -22,7 +22,7 @@ describe("Vote", function () {
     await vote.vote(1);
     await expect(vote.vote(1)).to.be.revertedWith("Vous ne pouvez plus voter");
   });
-  
+
   // Test pour s'assurer que le contrat est initialisé avec les bonnes options
   it("Should initialize with correct options", async function () {
     const option0 = await vote.options(0);
@@ -58,6 +58,6 @@ describe("Vote", function () {
     expect(option2.voteCount).to.equal(1);
   });
 
-  
-  
+
+
 });
