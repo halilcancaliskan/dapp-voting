@@ -71,13 +71,10 @@
 .title-container h1 {
   margin: 0;
   font-size: 2em;
-  /* Taille du texte */
   font-weight: bold;
-  /* Police en gras */
   color: #000;
-  /* Couleur dorée pour le titre */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  /* Ombre du texte pour le rendre plus lisible */
+
 }
 
 .app-container {

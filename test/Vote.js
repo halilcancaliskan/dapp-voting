@@ -45,9 +45,9 @@ describe("Vote", function () {
 
   // Test pour s'assurer que différents utilisateurs peuvent voter
   it("Should allow different users to vote", async function () {
-    await vote.vote(1); // owner votes
-    await vote.connect(addr1).vote(2); // addr1 votes
-    await vote.connect(addr2).vote(0); // addr2 votes
+    await vote.vote(1); 
+    await vote.connect(addr1).vote(2); 
+    await vote.connect(addr2).vote(0); 
 
     const option0 = await vote.options(0);
     const option1 = await vote.options(1);
