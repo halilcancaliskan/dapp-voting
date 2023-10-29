@@ -11,20 +11,20 @@ describe("Vote", function () {
   });
 
   // Premier test - Voter correctement :
-  it("Should vote correctly", async function () {
+  it("Devrait voter correctement", async function () {
     await vote.vote(1);  // Voter pour "Oui"
     const option = await vote.options(1);
     expect(option.voteCount).to.equal(1);
   });
 
   // Deuxième test - Empêcher le double vote
-  it("Shouldn't allow double voting", async function () {
+  it("Ne devrait pas autoriser le double vote", async function () {
     await vote.vote(1);
     await expect(vote.vote(1)).to.be.revertedWith("Vous ne pouvez plus voter");
   });
 
   // Test pour s'assurer que le contrat est initialisé avec les bonnes options
-  it("Should initialize with correct options", async function () {
+  it("Devrait s'initialiser avec les bonnes options", async function () {
     const option0 = await vote.options(0);
     const option1 = await vote.options(1);
     const option2 = await vote.options(2);
@@ -39,12 +39,12 @@ describe("Vote", function () {
   });
 
   // Test pour s'assurer qu'un utilisateur ne peut pas voter pour une option non existante
-  it("Shouldn't allow voting for non-existent option", async function () {
+  it("Ne devrait pas autoriser de voter pour une option inexistante", async function () {
     await expect(vote.vote(5)).to.be.revertedWith("Cette option n'existe pas");
   });
 
   // Test pour s'assurer que différents utilisateurs peuvent voter
-  it("Should allow different users to vote", async function () {
+  it("Devrait permettre à différents utilisateurs de voter", async function () {
     await vote.vote(1); // owner votes
     await vote.connect(addr1).vote(2); // addr1 votes
     await vote.connect(addr2).vote(0); // addr2 votes
