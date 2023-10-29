@@ -1,4 +1,4 @@
-#Executez les commandes suivantes sur la racine du projet pour éxécuter l'application :
+# Executez les commandes suivantes sur la racine du projet pour éxécuter l'application :
 
 # Initialisation des dépendances
 `npm install`
@@ -28,7 +28,7 @@ Et insérer cette ligne de code dans le fichier .env :
 # Organisation de l'équipe
 Front-end : Martin
 Back-end : Halil-Can
-Test : Valentin
+Test : Valentin,
 Contrat : Tony
 Déploiement : Adrien
 
